@@ -3,6 +3,16 @@
 {% block title %}main page{% endblock%}
 
 {% block content %}
-    <h4>Main page</h4>
-    <a href="about/">Переход на страницу about</a>
+    <div class="features">
+        <h1>{{ title }}</h1>
+            <p>Тренажёр состоит из трёх частей, посвящённых основам HTML и CSS, JavaScript и PHP. С помощью тренажёра
+                вы познакомитесь на практике с базовыми технологиями веб-разработки — разметите и оформите страницу,
+                напишете свой первый скрипт и научитесь собирать странички сайтов из кусочков PHP-кода.
+            </p>
+        <button class="btn btn-warning">На страницу про нас</button>
+
+        {% for el in values %}
+            <p>{{ el }}</p>
+        {% endfor %}
+    </div>
 {% endblock %}
